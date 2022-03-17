@@ -1,16 +1,14 @@
 <div align="center">
 
-# Project Title Goes here 
+# Semantic Text Similarity (on quora dataset)
 
-###  Add image/logo here
-<img src='https://cdn.dribbble.com/users/159078/screenshots/3018147/output_07opxg.gif' width=150px> <br>
-source : https://dribbble.com/shots/3018147-Quick-Add-Loading-Animation <br>
+<img src='https://github.com/saumyagoyal95/Text-Similarity---Deep-Learning-Project/blob/aa529f1291718e2a39a355698db9774f09a2d050/QuoraDataset.png' width=300px> <br>
+source : https://www.theverge.com/2012/9/11/3308440/quora-silicon-valley-topics-redesign-mainstream-q-and-a <br>
 
   
 [About](#about) •
 [Configuration Requirements](#configuration-requirements) •
-[Installation](#installation) •
-[How to Contribute](#how-to-contribute)  
+[Description](#installation) •
   
 </div>
 
@@ -34,18 +32,28 @@ What is the required configuration for running this code
 ```python
 pip install -r requirements.txt
 ```
-## 🖥️ Installation <a name="installation"></a>
+## 🖥️ Description <a name="installation"></a>
 
-(optional)
-Steps on:  How can someone download and start using your code on their system
-Very detailed stepwise intruction. Can include what to avoid.
+Design Choice:
+- GloVe Twitter Embedding with 50 dimentions were used
+- Preprocssing steps used - Lammetization and stop_word removal - customized the choosen stop_words.
+- Model Design: Two parallel LSTM layers were used for each question and further two fully connected Linear layers were used after concatinating the two - - LSTM layer tensors, finally a sigmoid layer was put forth for the classification
+- Loss : Cross Entrophy Loss - classical data classification loss
+- Optimizer: Adam
+- Created Custome Trainer class for training, validation and test dataset
+- Added Tensorboard for monitoring Training Loss, Training, Validation Accuracy and Hyper-params
+- For Evaluation - n random samples can be picked and checked for Duplication
 
-## ✍️ How to Contribute? <a name="how-to-contribute"></a>
+Obeservation:
+- Model performs 77 percent(approx) accuracy on the Training Dataset (35k observation) and around 65 percent(approx) on the Validation dataset (10k)
+- Model performs close to 65 percent(approx) on the Test Dataset(5k)
+- Further Hyper-parameter tuning, more preprocessing steps and using higher dimention embedding might increase the accuracy of the model.
+- In terms of Architecture, Bidirectional LSTM or Siamese Architecture could have been used.
 
-(optional)
-Interested in contributing in my project? Thank you so much for your interest! 
-I am always looking for improvements and contribution from the open-source developers is greatly appreciated.
+Learnings:
+I personally learned how to create a deep learning model from the absolute scratch, it was a nice mini-project to work up on. There is a lot of room for further learning.
 
-(Optional)  🌟 Information on code-of-conduct for contribution
+Reference:
+My work is inspired and referenced from : https://towardsdatascience.com/text-classification-with-pytorch-7111dae111a6 and
+https://github.com/tanmay17061/pytorch-potpourri/blob/master/tutorial_scripts/unilstm.ipynb
 
-(Optional) ⚠️ License Used and what are the main clause as per the license
