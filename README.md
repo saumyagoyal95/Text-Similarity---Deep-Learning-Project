@@ -51,9 +51,9 @@ Obeservation:
 - In terms of Architecture, Bidirectional LSTM or Siamese Architecture could have been used.
 
 Learnings:
-I personally learned how to create a deep learning model from the absolute scratch, it was a nice mini-project to work up on. There is a lot of room for further learning.
+- I personally learned how to create a deep learning model from the absolute scratch, it was a nice mini-project to work up on. There is a lot of room for further learning.
 
 Reference:
-My work is inspired and referenced from : https://towardsdatascience.com/text-classification-with-pytorch-7111dae111a6 and
+- My work is inspired and referenced from : https://towardsdatascience.com/text-classification-with-pytorch-7111dae111a6 and
 https://github.com/tanmay17061/pytorch-potpourri/blob/master/tutorial_scripts/unilstm.ipynb
 
